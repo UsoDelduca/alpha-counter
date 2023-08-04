@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Alpha Counter</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="image-on-top">
+        <div class="app-name-left">Alpha</div>
+        <img src="./images/red alpha.jpg" id="logo" />
+        <div class="app-name-right">Counter</div>
+      </div>
+      <div class="new-data">
+        <label class="new-data"><input id="colour-input" /></label>
+        <label class="new-data"><input id="plate-input" /></label>
+      </div>
+      <div class="table-of-contents" id="table">
+        <div class="header">
+          <div class="colour-cell" id="cell">Colour</div>
+          <div class="plate-cell" id="cell">Plate</div>
+        </div>
+        <div class="row">
+          <div class="colour-cell">White</div>
+          <div class="plate-cell">BMP 145</div>
+        </div>
+      </div>
+      <div class="add-new">
+        <button id="button">Add new</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
