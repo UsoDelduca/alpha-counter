@@ -5,7 +5,11 @@
   "main": "script.js",
   "type": "module",
   "scripts": {
-    "test": "vitest"
+    "start": "node server/index",
+    "dev": "nodemon server/index",
+    "test": "vitest",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "format": "prettier -w '**/*.{js,jsx,ts,tsx}'"
   },
   "keywords": [
     "alpha",
