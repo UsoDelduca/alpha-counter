@@ -1,0 +1,6 @@
+{
+  "cars": [
+    { "colour": "White", "plate": "ABC 123" },
+    { "colour": "Blue", "plate": "DEF 456" }
+  ]
+}

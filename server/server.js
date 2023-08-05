@@ -1,24 +1,25 @@
 import * as Path from 'node:path/posix'
 import * as URL from 'node:url'
+import * as fs from 'node:fs/promises'
+import pageRoute from './routes.js'
+
+// import editRoute from './routes.js'
+
 import express from 'express'
 import hbs from 'express-handlebars'
 
 const server = express()
-export default server
 
-// Middleware
-server.engine(
-  'hbs',
-  hbs.engine({
-    extname: 'hbs',
-  })
-)
+// Server configuration
+const publicFolder = Path.resolve('public')
+server.use(express.static(publicFolder))
+server.use(express.urlencoded({ extended: false }))
 
-const __filename = URL.fileURLToPath(import.meta.url)
-const __dirname = Path.dirname(__filename)
-
+// Handlebars configuration
+server.engine('hbs', hbs.engine({ extname: 'hbs' }))
 server.set('view engine', 'hbs')
-server.set('views', __dirname + '/views')
-server.use(express.static(__dirname + '/public'))
+server.set('views', Path.resolve('server/views'))
 
-// Routes
+server.use('/', pageRoute)
+
+export default server
